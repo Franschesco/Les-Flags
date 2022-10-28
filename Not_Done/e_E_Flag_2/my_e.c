@@ -5,14 +5,13 @@
 ** good prog
 */
 
-int my_f(double nb)
+int my_e(double nb)
 {
-    int result = my_put_float(nb);
+    int result = my_e_next(nb);
     return (result);
 }
 
 int main ()
 {
-    int result = my_f(42.1556);
-    return (result);
+    my_e(0.0012);
 }

@@ -28,19 +28,29 @@ static int zero (int int_nb)
     return (0);
 }
 
-int  my_f(float nb)
+static double negative (double nb)
 {
-    int i = 0;
-    int int_nb = 0;
-    int arron = 0;
+    if (nb < 0) {
+        nb = -nb;
+        my_putchar('-');
+        return (nb);
+    } return (nb);
+}
+
+int  my_f(double nb)
+{
+    int i = 0, int_nb = 0;
+    unsigned long long arron = 0;
     int length = 0;
+    nb = negative(nb);
     for (i; (nb - i) > 1; i++);
     nb = nb - i;
     arron = nb * 1000000;
     int_nb = arron;
-    if (arron == 1000000)
-        length = length + my_putchar('0');
-    else
+    if (arron == 1000000) {
+        i++;
+        length = length + my_put_nbr_len(i);
+    } else
         length = length + my_put_nbr_len(i);
     length = length + my_putchar('.');
     length = length + zero(int_nb);
@@ -48,6 +58,5 @@ int  my_f(float nb)
         length = length + my_put_nbr_len(int_nb);
     else {
         length = length + my_putstr("000000");
-    }
-    return (length);
+    } return (length);
 }

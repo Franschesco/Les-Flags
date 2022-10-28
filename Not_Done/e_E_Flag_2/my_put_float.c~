@@ -55,7 +55,7 @@ int my_put_float (double nb)
 {
     int length = 0, a = 0, size = 0;
     nb = before(&length, nb);
-    unsigned long long how = nb;
+    int how = nb;
     char *str;
     while (nb != how) {
         nb = nb * 10.00;
