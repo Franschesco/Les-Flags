@@ -11,7 +11,7 @@ int my_f(double nb)
     return (result);
 }
 
-int main ()
+int main (void)
 {
     int result = my_f(42.1556);
     return (result);

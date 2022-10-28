@@ -37,7 +37,7 @@ static double negative (double nb)
     } return (nb);
 }
 
-int  my_f(double nb)
+int my_put_float(double nb)
 {
     int i = 0, int_nb = 0, length = 0;
     unsigned long long arron = 0;
