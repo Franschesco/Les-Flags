@@ -5,8 +5,10 @@
 ** good prog
 */
 
-int my_p (int *a)
+int my_p (long a)
 {
-    my_putstr("0x");
-    my_putnbr_base_o(a, "0123456789abcdef");
+    int len = 1;
+    len = len + my_putstr("0x");
+    len = len + my_putnbr_base_o(a, "0123456789abcdef");
+    return (len);
 }

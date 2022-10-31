@@ -13,7 +13,7 @@ static int condition(int nbr)
     return (nbr);
 }
 
-int my_putnbr_base_o(int nbr, char const *base)
+int my_putnbr_base_o(long nbr, char const *base)
 {
     int len_base = my_strlen(base);
     int a = 0;
