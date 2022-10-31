@@ -5,7 +5,7 @@
 ** put base
 */
 
-static int condition(int nbr)
+static int condition(unsigned int nbr)
 {
     if (nbr < 0) {
         nbr = -nbr;
@@ -13,7 +13,7 @@ static int condition(int nbr)
     return (nbr);
 }
 
-int my_putnbr_base_b(unsigned int nbr, char const *base)
+int my_putnbr_base_o(unsigned int nbr, char const *base)
 {
     int len_base = my_strlen(base);
     int a = 0;
