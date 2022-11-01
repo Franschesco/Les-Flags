@@ -7,14 +7,18 @@
 
 #include <stdio.h>
 
-int my_b(unsigned int nb)
+int my_b(long nb)
 {
+    while (nb < 0) {
+        nb = 4294967295 + nb;
+    }
     return (my_putnbr_base_b(nb, "01"));
 }
 
 int main ()
 {
-    int result = my_b(4294967195);
-    printf("\n%b", -100);
+    long int a = -1;
+    printf("%b\n", a);
+    my_b(a);
     return (0);
 }
