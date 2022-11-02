@@ -74,6 +74,6 @@ int my_big_s(char *str)
 
 int main (void)
 {
-    int result = my_big_s("Salut1000ZAs");
+    int result = my_big_s("Salut-00ZAs");
     return (result);
 }
