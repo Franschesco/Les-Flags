@@ -2,9 +2,8 @@
 ** EPITECH PROJECT, 2022
 ** my_putchar
 ** File description:
-** God prog
+** put char
 */
-
 #include <unistd.h>
 
 int my_putchar(char c)

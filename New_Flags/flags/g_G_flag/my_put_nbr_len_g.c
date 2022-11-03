@@ -1,11 +1,12 @@
 /*
 ** EPITECH PROJECT, 2022
-** my_put_nbr
+** my_put_nbr g
 ** File description:
-** put number
+** put number g
 */
+#include "../../include/my.h"
 
-int my_put_nbr_len_next(int nb, int *lenght)
+static int my_put_nbr_len_next_g(int nb, int *lenght)
 {
     int i = 0, temp = nb, result;
     if (nb < 0) {
@@ -17,7 +18,7 @@ int my_put_nbr_len_next(int nb, int *lenght)
             i = nb % 10;
             nb = nb / 10;
             *lenght = *lenght + 1;
-            my_put_nbr_len_next(nb, lenght);
+            my_put_nbr_len_next_g(nb, lenght);
             my_putchar(48 + i);
         } else {
             *lenght = *lenght + 1;
@@ -29,9 +30,11 @@ int my_put_nbr_len_next(int nb, int *lenght)
     } return (*lenght);
 }
 
-int my_put_nbr_len(int nb)
+int my_put_nbr_len_g(int nb)
 {
     int length = 0;
-    int result = my_put_nbr_len_next(nb, &length);
+    while ((nb % 10) == 0) {
+        nb = nb / 10;
+    } int result = my_put_nbr_len_next_g(nb, &length);
     return (result);
 }
