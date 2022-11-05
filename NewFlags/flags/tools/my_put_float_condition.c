@@ -9,12 +9,18 @@
 
 static int zero_condition(int int_nb, int condition)
 {
-    i = 0;
-    while (i < condition - (/*len_nbr après la virgule*/ )) {
-        my_putchar('0');
-        i++;
+    int a = 1;
+    if (int_nb != 0) {
+        while (int_nb < 10 * condition) {
+            my_putchar('0');
+            int_nb = int_nb * 10;
+        } return (0);
+    } else {
+        while (a < condition) {
+            my_putchar('0');
+            a++;
+        }
     }
-    return (0);
 }
 
 static double negative_condition(double nb)
@@ -30,23 +36,27 @@ int my_put_float_condition(double nb, int condition)
 {
     int i = 0, int_nb = 0, length = 0;
     unsigned long long arron = 0;
+    int ten = 1;
+    int a = 0;
     nb = negative_condition(nb);
+    nb = nb + (5.00 / (my_compute_power_rec(10, (condition + 1))));
     for (i; (nb - i) > 1; i++);
     nb = nb - i;
-    arron = nb * 1000000;
-    int_nb = arron;
-    if (arron == 1000000) {
-        i++;
-        length = length + my_put_nbr_len(i);
-    } else
-        length = length + my_put_nbr_len(i);
-    if (condition <= 0)
-        return (0);
-    length = length + my_putchar('.');
-    length = length + zero_condition(int_nb, condition);
-    if (int_nb != 1000000)
-        length = length + my_put_nbr_len(int_nb);
-    else {
-        length = length + my_putstr("000000");
-    } return (length);
+    while (a < condition) {
+        ten = ten * 10;
+        a++;
+    }
+    arron = nb * ten;
+    my_put_nbr_len(i);
+    if (condition == 0)
+        return 0;
+    my_putchar('.');
+    zero_condition(arron, condition);
+    my_put_nbr_len(arron);
+}   
+
+int main (void)
+{
+    my_put_float_condition(12.002, 10);
+    printf("\n%.10f", 12.002);
 }

@@ -73,8 +73,12 @@ int some_flag(int *array, long long result, va_list list)
         nop = flags(array, result);
         if (nop == -1)
             return 0;
+    } if (array[2] != -1) {
+        nop = precision(array, result, list);
+        return (nop);
     } if (array[1] != -1) {
         nop = width(array, result, list);
+        return (nop);
     } if (array[2] != -1) {
         nop = precision(array, result, list);
     } return (nop);

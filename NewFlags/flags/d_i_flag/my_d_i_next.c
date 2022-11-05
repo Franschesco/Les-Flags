@@ -8,6 +8,14 @@
 #include "../../include/my.h"
 #include <stdarg.h>
 
+int next_array_number_1(int * array)
+{
+    if (array[2] >= 0)
+        my_putchar('0');
+    else
+        my_putchar(' ');
+}
+
 int array_1_number(int * array, long long result)
 {
     int i = 0;
@@ -21,10 +29,14 @@ int array_1_number(int * array, long long result)
         }
     } else {
         number = len_nbr(result);
+        if (array[0] == 2 & result >= 0)
+            i = i + 1;
         while (i < array[1] - number) {
-            my_putchar(' ');
+            next_array_number_1(array);
             i++;
-        } lenght(array, result);
+        } if (array[0] == 2)
+            my_putchar('+');
+        lenght(array, result);
     }
 }
 
@@ -58,7 +70,7 @@ int zero (int * array, long long result)
 int flags (int *array, long long result)
 {
     if (array[0] == 2) {
-        if (result >= 0)
+        if (result >= 0 && array[1] == -1)
             my_putchar('+');
         return 0;
     } if (array[0] == 3) {
