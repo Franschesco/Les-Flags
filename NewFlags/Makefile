@@ -19,6 +19,10 @@ SRC =	my_printf.c				\
 	flags/tools/my_putnbr_base_unsigned.c	\
 	flags/tools/my_getnbr.c			\
 	flags/tools/len_nbr.c			\
+	flags/tools/my_put_float_condition.c	\
+	flags/tools/my_compute_power_rec.c	\
+	flags/tools/my_put_float_return_len.c	\
+	flags/tools/my_put_float_condition_return_len.c	\
 	flags/d_i_flag/my_d_i.c			\
 	flags/d_i_flag/my_d_i_next.c		\
 	flags/d_i_flag/my_put_nbr_d_i.c		\
@@ -36,6 +40,7 @@ SRC =	my_printf.c				\
 	flags/u_flag/my_put_u.c			\
 	flags/u_flag/my_u_next.c		\
 	flags/f_F_flag/my_f.c			\
+	flags/f_F_flag/my_f_next.c		\
 	flags/x_X_flag/my_lowx.c		\
 	flags/x_X_flag/my_lowx_next.c		\
 	flags/x_X_flag/my_upx.c			\

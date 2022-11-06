@@ -22,6 +22,8 @@ int my_put_float(double);
 int my_putnbr_base_unsigned(unsigned int, char const *);
 int my_putstr1(char const *);
 int len_nbr(long long);
+int my_put_float_len(double);
+int my_put_float_condition_len(double, int);
 
 int my_percentage(va_list);
 
@@ -35,7 +37,7 @@ int my_put_nbr_d_int_ptrdiff(long long);
 int my_put_nbr_d_short_int(long long);
 int my_put_nbr_d_signed_char(long long);
 
-int my_f(va_list);
+int my_f(va_list, int * array);
 
 int my_o(va_list, int *);
 int my_putnbr_base_o(unsigned int, char const *);
